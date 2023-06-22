@@ -1,0 +1,26 @@
+<!-- <span [formGroup]="form">
+  <mat-card class="form-container" *ngFor="let firstName of userArray2.controls; index as idx; last as isLast">
+    <mat-card-title> MYTREE Parent Component</mat-card-title>
+    <mat-form-field>
+      <mat-label>First name</mat-label>
+      <input matInput placeholder="Ex. Jane" [formControl]="firstName" />
+    </mat-form-field> -->
+
+<!-- <mat-form-field>
+      <mat-label>Age</mat-label>
+      <input type="number" matInput placeholder="Ex. 43" formControlName="age" />
+    </mat-form-field> -->
+
+<!-- <button type="button" mat-raised-button color="accent" (click)="addInputControl()">+</button>
+
+  </mat-card>
+
+</span>
+<button (click)="AddChild()">SAVE</button> -->
+
+
+
+<app-reply [comments]="comments"> </app-reply>
+<button class="bb" mat-raised-button (click)="onSave(comments)">
+  SAVE
+</button>

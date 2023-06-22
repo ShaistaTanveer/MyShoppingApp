@@ -1,0 +1,22 @@
+<ngx-treeview [items]="items"> </ngx-treeview>
+<button (click)="onClick(items)">SAVE</button>
+<!-- <button (click)="onEdit(items)" *ngIf="isedit">UPDATE</button> -->
+<br />
+<br />
+
+<br />
+<br />
+
+<table border="2px solid black">
+  <tr>
+    <thead>
+      <td style="width: 100px">id</td>
+      <td style="width: 300px">course</td>
+    </thead>
+    <tbody *ngFor="let item of courses">
+      <td style="width: 100px">{{ item.id }}</td>
+      <td style="width: 100px">{{ item.course }}</td>
+      <button (click)="edit(item.id)">EDIT</button>
+    </tbody>
+  </tr>
+</table>

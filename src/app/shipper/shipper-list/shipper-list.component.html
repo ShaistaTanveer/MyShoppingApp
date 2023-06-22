@@ -1,0 +1,35 @@
+<div class="table">
+  <h1>SHIPPER LIST</h1>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Job Status</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let shipper of shipperList">
+      <tr *ngIf="isshowshipper === shipper.id || activemanager">
+        <th scope="row">{{shipper.id}}</th>
+        <td>{{shipper.firstName}}</td>
+        <td>{{shipper.email}}</td>
+        <td>{{shipper.mobile}}</td>
+        <td>{{shipper.gender}}</td>
+        <td>{{shipper.salary}}</td>
+        <td>{{shipper.jobstatus}}</td>
+        <td>
+          <a *ngIf="isshowshipper === shipper.id || !activemanager" class="mat-button"
+            [routerLink]="['/editShipper', shipper.id]">EDIT</a>
+          <button *ngIf="isshowshipper !== shipper.id || activemanager" class="mat-button delete-button"
+            (click)="onDelete(shipper.id)">DELETE</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="info-text mat-body-1" *ngIf="shipperList?.length <= 0">No shippers added yet!</p>
+</div>

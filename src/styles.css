@@ -1,0 +1,62 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Main colors */
+:root {
+  --primary-color: rgb(33, 197, 156);
+  --secondary-color: rgb(33, 197, 156);
+}
+
+/* Header */
+.header {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.header a {
+  color: #fff;
+}
+
+/* Links */
+.header ul li a {
+  color: #fff;
+}
+
+/* Buttons */
+.mat-button {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.mat-button:hover {
+  background-color: rgb(36, 185, 148); /* Lighter shade of secondary color */
+}
+
+/* Additional colors */
+:root {
+  --accent-color: #4a90e2; /* Blue accent color */
+  --text-color: #333; /* Text color */
+  --background-color: #f5f5f5; /* Background color */
+}
+
+/* Body */
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Other elements and components can be styled using the above color variables */

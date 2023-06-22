@@ -1,0 +1,46 @@
+.formsize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+mat-card {
+  padding: 20px;
+  width: 700px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0.75rem;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+button {
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: rgb(36, 185, 148);
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 2px;
+}

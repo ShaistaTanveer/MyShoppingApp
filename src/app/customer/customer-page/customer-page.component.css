@@ -1,0 +1,86 @@
+.customer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+.customer .left-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  position: relative;
+}
+
+.customer .left-section img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.customer .left-section .heading {
+  position: absolute;
+  top: 55%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  font-size: 52px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.customer .right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.customer .right-section h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.customer .right-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.customer .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.customer .buttons a {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.customer .buttons a:hover {
+  background-color: rgb(36, 185, 148);
+}
+
+.customer .login-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.customer .login-component.active {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,62 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.page-content {
+  width: 100%;
+  max-width: 800px; /* Adjust the max-width value as per your preference */
+}
+.page-heading {
+  font-size: 28px;
+  font-weight: normal;
+  margin: 20px;
+  text-align: center;
+}
+
+.filter-card {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.filter-field {
+  flex: 1 1 200px;
+}
+
+.search-button {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+thead {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.info-text {
+  text-align: center;
+  margin-top: 20px;
+}

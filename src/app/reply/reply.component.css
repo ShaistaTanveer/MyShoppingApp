@@ -1,0 +1,36 @@
+/* .form-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.form-wrapper {
+  display: flex;
+}
+
+mat-card {
+  margin: 20px;
+} */
+
+mat-form-field {
+  width: 100%;
+}
+mat-card {
+  border: solid;
+  width: 80%;
+  margin-top: 8%;
+  margin-left: 0%;
+}
+
+.container {
+  padding: 32px;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+}
+
+.margin-top {
+  margin-top: 24px;
+}

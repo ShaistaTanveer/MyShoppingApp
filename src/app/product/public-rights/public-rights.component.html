@@ -1,0 +1,63 @@
+<div class="page-container">
+  <div class="page-content">
+    <h1 class="page-heading">GET PRODUCTS USING FILTER</h1>
+
+    <mat-card class="filter-card">
+      <form (submit)="onfilter(onfilterf)" #onfilterf="ngForm">
+        <div class="filter-container">
+          <mat-form-field appearance="fill" class="filter-field">
+            <mat-label>Category</mat-label>
+            <mat-select [(value)]="selectedcategory">
+              <mat-option value="chocolate">CHOCOLATE</mat-option>
+              <mat-option value="soap">Soap</mat-option>
+              <mat-option value="spices">Spices</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="filter-field">
+            <mat-label>Stock Status</mat-label>
+            <mat-select [(value)]="selectedstockstatus">
+              <mat-option value="instock">In Stock</mat-option>
+              <mat-option value="outofstock">Out of Stock</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="filter-field">
+            <mat-label>Price</mat-label>
+            <mat-select [(value)]="selectedprice">
+              <mat-option value="10">Greater than $10</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <button class="search-button" mat-raised-button type="submit">
+            SEARCH
+          </button>
+        </div>
+      </form>
+    </mat-card>
+
+    <div class="table-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Stock Status</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of productList">
+            <td scope="row">{{ product.pid }}</td>
+            <td>{{ product.productName }}</td>
+            <td>{{ product.category }}</td>
+            <td>{{ product.stockstatus }}</td>
+            <td>{{ product.price }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="info-text mat-body-1" *ngIf="productList?.length <= 0">No products added yet!</p>
+    </div>
+  </div>
+</div>

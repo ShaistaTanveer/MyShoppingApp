@@ -1,0 +1,21 @@
+<!-- <div class="form-wrapper">
+  <mat-card>
+    <mat-card-title> reply Component</mat-card-title>
+    <ng-container [formGroup]="userForm">
+      <app-mytree-data formGroupName="basicInfo"></app-mytree-data>
+    </ng-container>
+
+  </mat-card>
+</div> -->
+
+
+<div id="mainDiv" *ngFor="let comment of comments?.reverse()">
+  <mat-card>
+    <label>{{ comment.text }}</label>
+    <br />
+    <input [(ngModel)]="text" cols="80" rows="7" />
+    <br />
+    <button mat-mini-fab color="primary" type="submit" (click)="addComment(comment)">ADD</button>
+    <app-reply [comments]="comment.anwsers"> </app-reply>
+  </mat-card>
+</div>

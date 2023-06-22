@@ -1,0 +1,59 @@
+<h1>ADD ORDER</h1>
+<br>
+<div class="formsize">
+  <mat-card>
+    <form (submit)="onaddOrder(addOrder)" #addOrder="ngForm">
+      <mat-form-field appearance="outline" *ngIf="!isshipper">
+        <mat-label>productName</mat-label>
+        <input matInput name="productName" [ngModel]="updatedOrder?.productName" type="text" placeholder="productName"
+          #productInput="ngModel" required>
+        <mat-error *ngIf="productInput.invalid">Please enter a valid name.</mat-error>
+      </mat-form-field> <br>
+
+      <mat-form-field appearance="outline" *ngIf="!isshipper">
+        <mat-label>quantity</mat-label>
+        <input matInput name="quantity" [ngModel]="updatedOrder?.quantity" type="text" placeholder="quantity"
+          #quantityInput="ngModel" required>
+        <mat-error *ngIf="quantityInput.invalid">Please enter a valid quantity.</mat-error>
+      </mat-form-field> <br>
+
+      <mat-form-field appearance="outline" *ngIf="!isshipper">
+        <mat-label>address</mat-label>
+        <input matInput name="address" [ngModel]="updatedOrder?.address" type="text" placeholder="address"
+          #addressInput="ngModel" required>
+        <mat-error *ngIf="addressInput.invalid">Please enter a valid address.</mat-error>
+      </mat-form-field> <br>
+
+      <mat-form-field appearance="outline" *ngIf="!isshipper">
+        <mat-label>orderDate</mat-label>
+        <input type="text" name="orderDate" [ngModel]="updatedOrder?.orderDate" matInput placeholder="orderDate"
+          #orderDateInput="ngModel" required>
+        <mat-error *ngIf="orderDateInput.invalid">Please enter a valid orderDate.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline" *ngIf="!iscustomer">
+        <mat-label>deliveryDate</mat-label>
+        <input type="text" name="deliveryDate" [ngModel]="updatedOrder?.deliveryDate" matInput
+          placeholder="deliveryDate" #deliveryDateInput="ngModel">
+        <!-- <mat-error *ngIf="deliveryDateInput.invalid">Please enter a valid deliveryDate.</mat-error> -->
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline" *ngIf="!iscustomer">
+        <mat-label>deliveryStatus</mat-label>
+        <input type="text" name="deliveryStatus" [ngModel]="updatedOrder?.deliveryStatus" matInput
+          placeholder="deliveryStatus" #deliveryStatusInput="ngModel">
+        <!-- <mat-error *ngIf="deliveryStatusInput.invalid">Please enter a valid deliveryStatus.</mat-error> -->
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline" *ngIf="!iscustomer">
+        <mat-label>shipperName</mat-label>
+        <input type="text" name="shipperName" [ngModel]="updatedOrder?.shipperName" matInput placeholder="shipperName"
+          #shipperNameInput="ngModel">
+        <!-- <mat-error *ngIf="shipperNameInput.invalid">Please enter a valid shipperName.</mat-error> -->
+      </mat-form-field>
+      <br>
+
+      <button mat-raised-button color="primary" type="submit">Place Order</button>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,27 @@
+<div class="manager-container">
+  <h1 class="manager-heading">Welcome Mr. Manager</h1>
+  <ul>
+    <li>
+      <a mat-button routerLink="addShipper" routerLinkActive="mat-accent" class="manager-button">ADD SHIPPER</a>
+    </li>
+    <li>
+      <a mat-button routerLink="deleteShipper" routerLinkActive="mat-accent" class="manager-button">LIST SHIPPER</a>
+    </li>
+    <li>
+      <a mat-button routerLink="addProduct" routerLinkActive="mat-accent" class="manager-button">ADD PRODUCTS</a>
+    </li>
+    <li>
+      <a mat-button routerLink="listProduct" routerLinkActive="mat-accent" class="manager-button">LIST PRODUCTS</a>
+    </li>
+    <li>
+      <a mat-button routerLink="listCustomer" routerLinkActive="mat-accent" class="manager-button">LIST CUSTOMER</a>
+    </li>
+    <li>
+      <a mat-button routerLink="listOrder" routerLinkActive="mat-accent" class="manager-button">LIST ORDER</a>
+    </li>
+  </ul>
+</div>
+
+<div class="router-container">
+  <router-outlet></router-outlet>
+</div>

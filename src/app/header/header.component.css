@@ -1,0 +1,19 @@
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.header {
+  background-color: rgb(33, 197, 156);
+}

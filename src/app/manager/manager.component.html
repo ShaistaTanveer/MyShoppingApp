@@ -1,0 +1,17 @@
+<div class="manager">
+  <div class="left-section">
+    <img src="../../assets/data/manager.jpg" alt="Image">
+    <h2 class="heading">Welcome Manager</h2>
+  </div>
+  <div class="login-component" [ngClass]="{ 'active': showLoginSignup }">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="right-section">
+    <h1>Welcome to MyShop</h1>
+    <h2>Please Login or Sign Up</h2>
+    <div class="buttons">
+      <a mat-button routerLink="SignUp" routerLinkActive="mat-accent" (click)="toggleLoginSignup()">Sign Up</a>
+      <a mat-button routerLink="Login" routerLinkActive="mat-accent" (click)="toggleLoginSignup()">Login</a>
+    </div>
+  </div>
+</div>

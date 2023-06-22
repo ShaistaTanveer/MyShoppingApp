@@ -1,0 +1,40 @@
+<div class="table">
+  <h1>ORDER LIST</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">productName</th>
+        <th scope="col">customerId</th>
+        <th scope="col">quantity</th>
+        <th scope="col">address</th>
+        <th scope="col">orderDate</th>
+        <th scope="col">deliveryDate</th>
+        <th scope="col">deliveryStatus</th>
+        <th scope="col">shipperName</th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor=" let order of orderList">
+      <tr *ngIf="costumerId==order.customerId &&isacustomer||isaManager||isashipper">
+        <th scope="row">{{order.oid}}</th>
+        <td>{{order.productName}}</td>
+        <td>{{order.customerId}}</td>
+        <td>{{order.quantity}}</td>
+        <td>{{order.address}}</td>
+        <td>{{order.orderDate}}</td>
+        <td>{{order.deliveryDate}}</td>
+        <td>{{order.deliveryStatus}}</td>
+        <td>{{order.shipperName}}</td>
+        <td>
+          <button mat-button style="color: red;" (click)="onDelete(order.oid)"
+            *ngIf="isacustomer&&!isaManager&&!isashipper">DELETE</button>
+          <a mat-button style="color: rgb(16, 158, 139); " [routerLink]="['/editOrder',order.oid]"
+            *ngIf="isacustomer&&!isaManager||isashipper">EDIT</a>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<p class="info-text mat-body-1" *ngIf="orderList?.length<=0"> No Order yet!</p>
